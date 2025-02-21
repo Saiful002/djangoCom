@@ -3,8 +3,7 @@
 {% block title %} Home {% endblock title %}
 
 {% block banner-slider %}
-
-<div class="carousel w-full">
+<div class="carousel w-full relative z-0">
   <div id="slide1" class="carousel-item relative w-full">
     <img src="{% static 'app/images/banner/b1.jpg' %}" class="w-full" alt="Banner 1" />
     <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -34,11 +33,27 @@
     </div>
   </div>
 </div>
-
 {% endblock banner-slider %}
 
 {% block main-content %}
-
 <h1>Welcome to product</h1>
+
+<div class="card bg-base-100 w-96 shadow-xl mx-auto mt-10">
+  <figure class="px-10 pt-10">
+    <img
+      src="{% static 'app/images/product/product_image.jpg' %}"
+      alt="Product"
+      class="rounded-xl" />
+  </figure>
+  <div class="card-body items-center text-center">
+    <h2 class="card-title">Product Name</h2>
+    <p>Product description goes here. It provides details about the product.</p>
+    <p class="text-lg font-bold">$99.99</p>
+    <div class="card-actions flex justify-between w-full">
+      <button class="btn btn-primary">Add to Cart</button>
+      <button class="btn btn-secondary">Whitelist</button>
+    </div>
+  </div>
+</div>
 
 {% endblock main-content %}
