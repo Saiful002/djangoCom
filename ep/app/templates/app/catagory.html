@@ -1,0 +1,19 @@
+{% extends 'app/index.html' %}
+{% load static %}
+{% block title %} Catagory {% endblock title %}
+
+{% block main-content %} 
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
+    {% for prod in product %}
+    <div class="bg-white shadow-lg rounded-2xl overflow-hidden transition-transform transform hover:scale-105 p-4">
+        <img src="{{prod.image.url}}" alt="{{ prod.title }}" class="w-full h-96 object-cover">
+        <div class="p-4">
+            <h2 class="text-xl font-semibold text-gray-800">{{ prod.title }}</h2>
+            <h2 class="text-3xl font-bold text-gray-800">$ {{ prod.price }}</h2>
+            <p class="text-gray-600 mt-2 mb-8">{{ prod.description }}</p>
+            <a href="{% url 'productDetails' prod.id %}" class="mt-6 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition">See details</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock main-content %}

@@ -10,131 +10,70 @@
       rel="stylesheet"
       type="text/css"
     />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <link rel="stylesheet" href="{% static 'app/css/owl.carousel.min' %}" />
+    <!-- <link rel="stylesheet" href="{% static 'app/css/owl.carousel.min' %}" /> -->
   </head>
   <body>
-    <!-- navbar start -->
-    <div class="navbar bg-green-700 text-white rounded-b-xl shadow-xl z-50">
-      <div class="navbar-start">
-        <div class="dropdown">
-          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
-          </div>
-          <ul
-            tabindex="0"
-            class="menu menu-sm dropdown-content bg-green-700 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-          >
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li>
-              <a>Products</a>
-              <ul class="p-2">
-                <li><a href="">Milk</a></li>
-                <li><a href="">Curd</a></li>
-                <li><a href="">Milkshake</a></li>
-                <li><a href="">Lassi</a></li>
-                <li><a href="">Ghee</a></li>
-                <li><a href="">Paneer</a></li>
-                <li><a href="">Cheese</a></li>
-                <li><a href="">Ice-cream</a></li>
-              </ul>
-            </li>
-            <li><a href="{% url 'about' %}">About us</a></li>
-            <li><a href="{% url 'contact' %}">Contact us</a></li>
-          </ul>
-        </div>
-        <a class="btn btn-ghost text-xl">
-          <img
-            class="w-[100px] h-[50px]"
-            src="{% static 'app/images/product/neel.png' %}"
-            alt=""
-          />
-        </a>
-      </div>
-      <div class="navbar-center hidden lg:flex">
-        <ul class="menu menu-horizontal px-1">
-          <li><a href="{% url 'home' %}">Home</a></li>
-          <li>
-            <details>
-              <summary>Products</summary>
-              <ul class="p-2 bg-green-700">
-                <li><a href="">Milk</a></li>
-                <li><a href="">Curd</a></li>
-                <li><a href="">Milkshake</a></li>
-                <li><a href="">Lassi</a></li>
-                <li><a href="">Ghee</a></li>
-                <li><a href="">Paneer</a></li>
-                <li><a href="">Cheese</a></li>
-                <li><a href="">Ice-cream</a></li>
-              </ul>
-            </details>
-          </li>
-          <li><a href="{% url 'about' %}">About us</a></li>
-          <li><a href="{% url 'contact' %}">Contact us</a></li>
-        </ul>
-      </div>
-      <div class="navbar-end">
-        <div class="flex items-center space-x-4">
-          <!-- Search Form (hidden on mobile, visible on large screens) -->
-          <form class="flex items-center hidden lg:flex">
-            <input
-              type="text"
-              placeholder="Search..."
-              class="input input-bordered w-full max-w-xs"
-            />
-            <button type="submit" class="btn btn-ghost">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </button>
-          </form>
-          <!-- Card Icon -->
-          <a href="#" class="btn btn-ghost">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 6h18M3 14h18M3 18h18" />
-            </svg>
-          </a>
-          <!-- Whitelist Icon -->
-          <a href="#" class="btn btn-ghost">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-          </a>
-          <!-- Profile Dropdown -->
-          <div class="dropdown dropdown-end">
-            <label tabindex="0" class="btn m-1">
-              <img class="w-10 h-10 rounded-full" src="{% static 'app/images/profile/rifat.jpg' %}" alt="Rifat" />
-            </label>
-            <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-green-700 rounded-box w-52">
-              <li><a href="#">Profile</a></li>
-              <li><a href="#">Settings</a></li>
-              <li><a href="#">Logout</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+   
+
+<nav class="bg-white border-gray-200 dark:bg-orange-600 dark:border-gray-700">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
+    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="https://images-platform.99static.com//y0rb96b9CUsj6F8lqnkVOPlBuyY=/0x0:999x999/fit-in/500x500/99designs-contests-attachments/109/109048/attachment_109048124" class="h-8" alt="Flowbite Logo" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">DjangoCom</span>
+    </a>
+    <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+      <ul class="flex flex-col font-medium p-2  mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+        <li>
+          <a href="{% url 'home' %}" class="block p-2 text-white bg-blue-700 rounded rounded-md md:bg-transparent   md:dark:text-white dark:bg-blue-600 md:dark:bg-transparent md:dark:hover:bg-gray-900" aria-current="page">Home</a>
+        </li>
+        <li>
+            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full p-2 text-gray-900 rounded rounded-md hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700  md:w-auto dark:text-white md:dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-gray-900">Catagory <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+  </svg></button>
+            <!-- Dropdown menu -->
+            <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                  <li>
+                    <a href="{% url 'catagory' 'MO' %}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mens Outfit</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'catagory' 'WO' %}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Womens Outfit</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'catagory' 'KO' %}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Kids Outfit</a>
+                  </li>
+                </ul>
+                
+            </div>
+        </li>
+        <li>
+          <a href="{% url 'about' %}" class="block p-2 text-gray-900 rounded rounded-md hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700  dark:text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-gray-900">About Us</a>
+        </li>
+        <li>
+          <a href="#" class="block p-2 text-gray-900 rounded rounded-md hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700  dark:text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-gray-900">Pricing</a>
+        </li>
+        <li>
+          <a href="{% url 'contact' %}" class="block p-2 text-gray-900 rounded rounded-md hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700  dark:text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-gray-900">Contact Us</a>
+        </li>
+      </ul>
     </div>
-    <!-- navbar end -->
+  </div>
+</nav>
+
 
     <div class="relative z-0">{% block banner-slider %} {% endblock banner-slider %}</div>
     {% block main-content %} {% endblock main-content %}
 
     <!-- footer start -->
-    <footer class="footer bg-neutral text-neutral-content items-center p-4">
+    <footer class="footer bg-orange-600 text-neutral-content items-center p-16 mt-64">
       <aside class="grid-flow-col items-center">
         <svg
           width="36"
@@ -151,7 +90,7 @@
         </svg>
         <p>Copyright © 2025- All right reserved</p>
       </aside>
-      <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+      <nav class="grid-flow-col gap-2 md:place-self-center md:justify-center">
         <a>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -193,6 +132,9 @@
         </a>
       </nav>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+
     <!-- footer end -->
   </body>
 </html>
